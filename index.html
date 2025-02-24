@@ -4,367 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Document</title>
+    <title>Responsive Website</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-[#f1f3f6]  container mx-auto" >
-    <section class="">
-<nav class="bg-[#ffffff]   ">
-    <div class="navbar flex justify-between items-center  gap-3  ">
-       <div id="burger"><i class="fa-solid fa-bars" ></i></div>
-      
-        <div> <img class="  " src="logo.png"></div>
-        <div class=" container gap-9   ">
-            <button class="    bg-[#f5faff]  border-red-700 border-2 rounded">
-                <img class="h-6 w-6 inline-flex " src="deliver btn.png">
-                <span>Delivery</span>
+<body class="bg-[#f1f3f6] container mx-auto px-4">
+    <nav class="bg-[#ffffff] p-4 flex justify-between items-center">
+        <button id="burger" class="lg:hidden">
+            <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+        <img src="logo.png" class="h-10 w-auto">
+        <div class="hidden lg:flex gap-4">
+            <button class="bg-[#f5faff] border-red-700 border-2 rounded px-4 py-2 flex items-center">
+                <img class="h-6 w-6" src="deliver btn.png">
+                <span class="ml-2">Delivery</span>
             </button>
-            <button class="  bg-[#f5faff]">
-                <img class="h-6 w-6 inline-flex  bg-[#f5faff] " src="deliver btn2.png">
-                <span>PICKUP</span>
+            <button class="bg-[#f5faff] px-4 py-2 flex items-center">
+                <img class="h-6 w-6" src="deliver btn2.png">
+                <span class="ml-2">PICKUP</span>
             </button>
-           
         </div>
-        <div class="flex items-center">
-            <button class="bg-red-700 border rounded font-bold text-white  text-center px-6  ">Login</button>
-        </div>
-       
-        
-        
-    </div>
-    <div class="  ">
-       
-    
-        <ul id="list" class="flex flex-col    bg-[#f5faff] top-0 bottom-0 w-60 left-0 absolute transform  -translate-x-full">
-            <div> <button class="h-13 w-12 py-3  bg-red-700 border rounded font-bold text-white  text-center">Login</button></div>
-                
-        <div class="mt-10"><hr class="w-30 h-1  bg-red-600 border-0 rounded-sm  dark:bg-gray-700"></div>
-            
-            
-           <div class="flex flex-col pl-5 gap-8 mt-7">
-            <button class="inline-flex">
-                <img class="h-6 w-6" src="Store-Locator.jpg">
-                <span>Store Locator</span>
-            </button>
-            <button class="inline-flex">
-                <img class="h-6 w-6" src="Store-Locator.jpg">
-                <span>Track Order</span>
-            </button>
-            <button class="inline-flex">
-                <img class="h-6 w-6" src="Explore-menu.jpg">
-                <span>Explore Menu</span>
-            </button>
-               </div>
-               <div class="mt-10"><hr class="w-30 h-1  bg-red-600 border-0 rounded-sm  dark:bg-gray-700"></div>
-            <a href=""><li class=" mx-4 my-6 hover:animate-bounce  hover:text-red-700 font-bold ">About Us</li></a> 
-            <a href=""><li class=" mx-4 my-6 hover:animate-bounce  hover:text-red-700 font-bold  ">FeedBack</li></a> 
-          <a href=""><li class=" mx-4 my-6 hover:animate-bounce  hover:text-red-700 font-bold ">Terms & Conditions</li></a> 
-           <a href=""> <li class=" mx-4 my-6 hover:animate-bounce  hover:text-red-700 font-bold  ">Privacy Policy</li></a> 
-            <a href=""><li class=" mx-4 my-6 hover:animate-bounce  hover:text-red-700 font-bold ">Contact</li></a> 
-            <a href=""><li class=" mx-4 my-6 hover:animate-bounce  hover:text-red-700 font-bold  ">Mitao Bhook</li></a> 
-           <a href=""><li class="mx-4 my-6 hover:animate-bounce  hover:text-red-700 font-bold ">Mitao Bhook-Scholarship</li></a>  
-            <a href="" class=""><li class=" mx-4 my-6 hover:animate-bounce  hover:text-red-700 font-bold  ">Careers</li></a>
-    
-              </ul>
-                   </div> 
-   
-    
-               </nav>
-
-             </section>
-            <!-- ----------section-------------------- -->
-    <section class="main">
-       
-          <div class="slide">
-                <img src="main.jpg">
-            </div>
-          <div class="flex  m-1 justify-evenly">
-            <button class="bg-red-600 px-28 py-2 text-center font-bold text-white border rounded">Order</button>
-          </div>
-
+        <button class="bg-red-700 text-white px-4 py-2 rounded">Login</button>
+    </nav>
+    <ul id="list" class="fixed left-0 top-0 w-64 h-full bg-[#f5faff] transform -translate-x-full transition-transform lg:hidden">
+        <button class="bg-red-700 text-white px-4 py-2 rounded block w-full">Login</button>
+        <li class="p-4 border-b">Store Locator</li>
+        <li class="p-4 border-b">Track Order</li>
+        <li class="p-4 border-b">Explore Menu</li>
+    </ul>
+    <section class="text-center py-6">
+        <img src="main.jpg" class="w-full max-w-2xl mx-auto">
+        <button class="bg-red-600 text-white px-10 py-2 rounded mt-4">Order</button>
     </section>
-    <section class="Explore menue container ">
-        <div class="">
-            <h2 class="text-2xl  ml-4 font-bold text-black">EXPLORE MENUE</h2>
-            <hr class="w-20 h-1  bg-red-600 border-0 rounded-sm  dark:bg-gray-700">
-            <div class=" grid grid-flow-col ">
-
-                <button><i class=" bg-red-600 rounded-full px-2 fa-solid fa-arrow-left"></i></button>
-               
-                
-                <div class="pl-4">
-                    <img class="h-44 w-44 "  src="one.png">
-                    <h1 class="pl-7">Everyday value</h1>
-                </div>
-                <div class="">
-                    <img class="h-44 w-44 transition   "  src="two.png">
-                    <h1 class="">Ala-Carte-&-Combos</h1>
-                </div>
-                <div class="">
-                    <img class="h-44 w-44 "  src="six.png">
-                    <h1 class="">Promotion</h1>
-                </div>
-                <div class="">
-                    <img class="h-44 w-44  "  src="four.png">
-                    <h1 class="">Signature-box</h1>
-                    
-                </div>
-                <button><i class="  bg-red-600 rounded-full px-2 fa-solid fa-arrow-right"></i></button>
-            </div>
-            
-            
-        </div>
-
+    <section class="grid grid-cols-2 md:grid-cols-4 gap-4 p-4">
+        <div class="bg-white p-4 rounded shadow">Item 1</div>
+        <div class="bg-white p-4 rounded shadow">Item 2</div>
+        <div class="bg-white p-4 rounded shadow">Item 3</div>
+        <div class="bg-white p-4 rounded shadow">Item 4</div>
     </section>
-    <section class="SEller py-3">
-       
-             
-            <div>
-                <h1 class=" text-2xl  ml-4 font-bold text-black">BEST SELLERS</h1>
-                <hr class="w-20 h-1  bg-red-600 border-0 rounded-sm  dark:bg-gray-700">
-                 
-            </div>
-            <div class=" mt-7 ">
-            <div class="flex justify-between gap-4">
-            <div class="bg-white w-80 h-96 border rounded card">
-                <div class=" flex items-center justify-center ">
-                    <div>
-                    <span class="bg-red-700 h-6 w-9 text-red-700">b</span>
-                    <span class="bg-red-700 h-6 w-9 text-red-700">b</span>
-                    <span class="bg-red-700 h-6 w-9 text-red-700">b</span>
-                    </div>
-                    </div>
-                    <div class="info py-5">
-                        <div>
-                            <h1 class="font-bold text-xl">Zinger Stacker Combo</h1>
-                            
-                        </div>
-                        
-                      </div >
-              <div> <img class="h-60 w-60 inline-block p-2 hover:scale-105 ease-in-out duration-300" src="kurunch burger.png"></div> 
-              
-              
-            </div>
-           
-           
-            <div class="bg-white w-80 h-96 border rounded card">
-                <div class=" flex items-center justify-center ">
-                    <div>
-                    <span class="bg-red-700 h-6 w-9 text-red-700">b</span>
-                    <span class="bg-red-700 h-6 w-9 text-red-700">b</span>
-                    <span class="bg-red-700 h-6 w-9 text-red-700">b</span>
-                    </div>
-                    </div>
-                    <div class="info py-5">
-                        <div>
-                            <h1 class="font-bold text-xl">Zinger Stacker Combo</h1>
-                            
-                        </div>
-                        
-                      </div >
-              <div> <img class="h-60 w-60 inline-block p-2 hover:scale-105 ease-in-out duration-300" src="seven.png"></div> 
-              
-              
-            </div>
-           
-           
-            <div class="bg-white w-80 h-96 border rounded card">
-                <div class=" flex items-center justify-center ">
-                    <div>
-                    <span class="bg-red-700 h-6 w-9 text-red-700">b</span>
-                    <span class="bg-red-700 h-6 w-9 text-red-700">b</span>
-                    <span class="bg-red-700 h-6 w-9 text-red-700">b</span>
-                    </div>
-                    </div>
-                    <div class="info py-5">
-                        <div>
-                            <h1 class="font-bold text-xl">Zinger Stacker Combo</h1>
-                            
-                        </div>
-                        
-                      </div >
-              <div> <img class="h-60 w-60 inline-block p-2 hover:scale-105 ease-in-out duration-300" src="six.png"></div> 
-              
-              
-            </div>
-            
-           
-            <div class="bg-white w-80 h-96 border rounded card">
-                <div class=" flex items-center justify-center ">
-                    <div>
-                    <span class="bg-red-700 h-6 w-9 text-red-700">b</span>
-                    <span class="bg-red-700 h-6 w-9 text-red-700">b</span>
-                    <span class="bg-red-700 h-6 w-9 text-red-700">b</span>
-                    </div>
-                    </div>
-                    <div class="info py-5">
-                        <div>
-                            <h1 class="font-bold text-xl">Zinger Stacker Combo</h1>
-                            
-                        </div>
-                        
-                      </div >
-              <div> <img class="h-60 w-60 inline-block p-2 hover:scale-105 ease-in-out duration-300" src="three.png"></div> 
-              
-              
-            </div>
-                 </div>
-                </div>
-
-
-    </section>
-    <section class="TOPDEAL container">
-        <div>
-            <h1 class=" text-2xl  ml-4 font-bold text-black">BEST SELLERS</h1>
-            <hr class="w-20 h-1  bg-red-600 border-0 rounded-sm  dark:bg-gray-700">
-             
-        </div>
-        <div class="mt-7 flex justify-evenly" >
-            <div class="bg-white w-80 h-96 border rounded card">
-                <div class=" flex items-center justify-center ">
-                    <div>
-                    <span class="bg-red-700 h-6 w-9 text-red-700">b</span>
-                    <span class="bg-red-700 h-6 w-9 text-red-700">b</span>
-                    <span class="bg-red-700 h-6 w-9 text-red-700">b</span>
-                    </div>
-                    
-                </div>
-              <div> <img class="h-60 w-60 inline-block p-2 hover:scale-105 ease-in-out duration-300" src="kurunch burger.png"></div> 
-              <div class="info">
-                <div>
-                    <h1 class="font-bold text-xl">Zinger Stacker Combo</h1>
-                    <p class="">1 Zinger Stacker + 1 Regular fries + 1 Regular drink</p>
-                </div>
-                <div class="price">
-                    <p class="font-bold">Rs 950</p>
-                </div>
-                
-              </div >
-              <div class="flex justify-center"><button class="bg-red-600 px-6 py-2 text-center font-bold text-white border rounded">+ADD TO BUCKET</button></div>
-            </div>
-        <div class="bg-white w-80 h-96 border rounded card">
-            <div class=" flex items-center justify-center ">
-                <div>
-                <span class="bg-red-700 h-6 w-9 text-red-700">b</span>
-                <span class="bg-red-700 h-6 w-9 text-red-700">b</span>
-                <span class="bg-red-700 h-6 w-9 text-red-700">b</span>
-                </div>
-                
-            </div>
-          <div> <img class="h-60 w-60 inline-block p-2 hover:scale-105 ease-in-out duration-300" src="four.png"></div> 
-          <div class="info">
-            <div>
-                <h1 class="font-bold text-xl">Crispy Duo Box</h1>
-                <p class="">Turn up the fun with 5 pcs Hot & Crispy Chicken + 1 Large fries + 2</p>
-            </div>
-            <div class="price">
-                <p class="font-bold">Rs 1350</p>
-            </div>
-            
-          </div >
-          <div class="flex justify-center"><button class="bg-red-600 px-6 py-2 text-center font-bold text-white border rounded">+ADD TO BUCKET</button></div>
-        </div>
-        <div class="bg-white w-80 h-96 border rounded card">
-            <div class=" flex items-center justify-center ">
-                <div>
-                <span class="bg-red-700 h-6 w-9 text-red-700">b</span>
-                <span class="bg-red-700 h-6 w-9 text-red-700">b</span>
-                <span class="bg-red-700 h-6 w-9 text-red-700">b</span>
-                </div>
-                
-            </div>
-          <div> <img class="h-60 w-60 inline-block p-2 hover:scale-105 ease-in-out duration-300" src="five.png"></div> 
-          <div class="info">
-            <div>
-                <h1 class="font-bold text-xl">Family Festival 3</h1>
-                <p class="">An ultimate meal for the fam. It includes 4 Zinger burgers + 4</p>
-            </div>
-            <div class="price">
-                <p class="font-bold">Rs 2590</p>
-            </div>
-            
-          </div >
-          <div class="flex justify-center"><button class="bg-red-600 px-6 py-2 text-center font-bold text-white border rounded">+ADD TO BUCKET</button></div>
-        </div>
-    </div>
-    <section class="apps m-7 container">
-        <div class="grid grid-flow-col gap-10">
-            <div class="">
-               <img class="p-4 rounded" src="PICK UP.png">
-                <img  class="p-4 rounded" src="app.jpg">
-            </div>
-            <div>
-                <img class="rounded p-4" src="favorite order.png">
-                 <div class="  inline-block ">
-                    <img class=" pl-32 pt-5" src="explore menu.png">
-                    <div>
-                   <h1 class=" font-bold">Adding 11 herbs and spices, Explore our menu and add items to your cart.</h1>
-                  <div class=" flex pr-4 justify-center"><button class="bg-[#ea002a] px-10 py-2 font-bold   text-white rounded-xl">Explore Menu</button></div> 
-                </div>
-                
-                 </div>
-             </div>
-          
-        </div>
-        
-
-    </section>
-    <footer class="container">
-        <div class="flex items-center justify-center gap-6">
-            <button><img class="h-6 w-6" src="logo.png"></button>
-            <button><img class="h-6 w-6" src="facebooklogo.png"></button>
-            <button><img class="h-6 w-6" src="youtubelogo.png"></button>
-            <button><img class="h-6 w-6" src="insta.png"></button>
-            
-        </div>
-        <div class=" grid grid-cols-4 pt-6">
-            <ul class="">
-                <li class="hover:text-red-600 mt-3"><a href="#">About Us</a></li>
-                <li class="hover:text-red-600 mt-3"><a href="#">Mitao Book</a></li>
-                <li class="hover:text-red-600 mt-3"><a href="#">Mitao Bhook - Scholarship</a></li>
-                <li class="hover:text-red-600 mt-3"><a href="#">Privacy Policy</a></li>
-                <li class="hover:text-red-600 mt-3"><a href="#">Careers</a></li>
-            </ul>
-            <ul>
-                <li class="hover:text-red-600 mt-3"><a href="#">Contact Us</a></li>
-                <li class="hover:text-red-600 mt-3"><a href="#">Store Locator</a></li>
-                <li class="hover:text-red-600 mt-3"><a href="#">Track Order</a></li>
-               
-            </ul>
-            <ul>
-                <li class="hover:text-red-600 mt-3"><a href="#">Terms & Conditions</a></li>
-               
-            </ul>
-            <div class="gap-y-4">
-                <img src="playstore1.png">
-                <img class="mt-6"  src="playstor2.png">
-            </div>
-
-
-
-
-        </div>
-        <div class="copyright flex justify-between mt-10">
-            <h4 class="font-bold">2025 KFC. All rights reserved</h4>
-              <div>
-                <h2 class="font-bold text-red-700">Powered by</h2>
-                <span>SimpleX Technology Solutions</span>
-                <hr class=" h-2">
-            </div>
-          
-           
-
-        </div>
-       
+    <footer class="bg-gray-800 text-white text-center p-4 mt-6">
+        <p>2025 KFC. All rights reserved.</p>
     </footer>
-    
     <script>
-        const list = document.getElementById('list');
-        const hamburger = document.getElementById('burger');
-        hamburger.addEventListener('click',()=>{
-            list.classList.toggle('translate-x-0');
-
-        })
+        document.getElementById('burger').addEventListener('click', () => {
+            document.getElementById('list').classList.toggle('translate-x-0');
+        });
     </script>
 </body>
 </html>
